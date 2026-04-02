@@ -24,3 +24,9 @@ lsblk -f
 
 #Check if the system is booted in UEFI or BIOS mode
 [ -d /sys/firmware/efi ] && echo "UEEFI" || echo "BIOS"
+
+#Run the next command only if the previous command succeeded (exit status 0)
+&&
+
+#Run the next command only if the previous command failed (non-zero exit status)
+||
