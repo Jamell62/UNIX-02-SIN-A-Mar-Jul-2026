@@ -15,3 +15,12 @@ sudo apt install parted
 
 #This command shows all disks and partitions with their details and filesystems, separated by lines for readability.
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
+
+#Run parted as superuser to list all disks and their partitions
+sudo parted -l
+
+#List all block devices (disks and partitions) with their filesystem information
+lsblk -f
+
+#Check if the system is booted in UEFI or BIOS mode
+[ -d /sys/firmware/efi ] && echo "UEEFI" || echo "BIOS"
