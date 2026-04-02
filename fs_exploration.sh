@@ -30,3 +30,6 @@ lsblk -f
 
 #Run the next command only if the previous command failed (non-zero exit status)
 ||
+
+#Displays detailed information about the file test.txt, reads the file’s inode and shows metadata, not just the content.
+stat test.txt
