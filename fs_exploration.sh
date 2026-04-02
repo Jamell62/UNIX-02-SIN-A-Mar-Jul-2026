@@ -12,3 +12,6 @@ sudo apt upgrade
 
 #Run the APT package manager as superuser to install the program called parted.
 sudo apt install parted
+
+#This command shows all disks and partitions with their details and filesystems, separated by lines for readability.
+sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
