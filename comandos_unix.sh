@@ -34,3 +34,4 @@ Hard Link
 
 #Creates a symbolic pointer to another file (soft link).
 #If the original file is removed, the link becomes broken.
+Soft Link
