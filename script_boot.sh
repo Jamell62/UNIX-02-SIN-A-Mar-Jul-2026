@@ -53,3 +53,18 @@ stat .
   File: .
   Size: 4096            Blocks: 8          IO Block: 4096   directory
 Device: 7,5     Inode: 1573086     Links: 2
+
+#The command pwd shows the current directory you are in.
+pdw
+
+#The command whoami displays the current user you are logged in as.
+whoami
+
+#The command ls -lt lists files in long format sorted by modification time, showing the most recently modified files first
+Is -lt
+
+#The command ls /etc | head -20 lists the first 20 files inside the /etc directory.
+ls /etc | head -20
+
+#The command ls /dev | tail -20 lists the last 20 files inside the /dev directory.
+ls /dev | tail -20
