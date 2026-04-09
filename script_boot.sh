@@ -47,3 +47,9 @@ ls --all
 total 8
 1573086 drwxrwxrwx+ 2 codespace codespace 4096 Apr  9 12:19 .
 1572874 drwxrwxrwx+ 5 codespace root      4096 Apr  9 12:19 ..
+
+#This value indicates the device where the file or directory is stored, but instead of a name like “C drive” or “SSD”, it uses an internal system identifier. It is made up of two numbers: 7 → major number 5 → minor number
+stat .
+  File: .
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 7,5     Inode: 1573086     Links: 2
