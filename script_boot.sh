@@ -24,3 +24,21 @@ echo $HOME
 
 #The command echo $PATH prints a list of directories where the system searches for executable commands. These directories are separated by colons and allow you to run commands without typing their full p
  echo $PATH
+
+#The command ls -lai lists all files in the current directory in a detailed format. It shows hidden files (-a), displays extra information like permissions and size (-l), and includes the inode number of each file (-i).
+ ls -lai
+
+#The command ls -l -a -i does exactly the same as ls -lai. It just separates each option instead of combining them, but the result is identical.
+ ls -l -a -i
+
+#The command man ls opens the manual page for the ls command. It provides detailed information about all available options and how to use them.
+man ls
+ 
+#The command ls --all lists all files in the directory, including hidden files (those that start with a dot .), but without the detailed format.
+ls --all
+
+#The symbol . represents the current directory. It is used to refer to the folder you are currently in.
+.
+
+#The symbol .. represents the parent directory, which is the folder one level above your current location.
+..
