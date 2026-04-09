@@ -42,3 +42,8 @@ ls --all
 
 #The symbol .. represents the parent directory, which is the folder one level above your current location.
 ..
+
+#The line total 8 shows the total space used by the listed files in the directory. The numbers 1573086 and 1572874 are inode numbers, which are unique identifiers for each file or directory in the system. The string drwxrwxrwx+ represents permissions: d means it is a directory, r is read, w is write, x is execute, and + indicates additional permissions (ACL). The numbers 2 and 5 show how many links each directory has. The names codespace codespace and codespace root indicate the owner and the group. The value 4096 is the size in bytes. The date Apr 9 12:19 shows the last modification time. Finally, . refers to the current directory and .. refers to the parent directo
+total 8
+1573086 drwxrwxrwx+ 2 codespace codespace 4096 Apr  9 12:19 .
+1572874 drwxrwxrwx+ 5 codespace root      4096 Apr  9 12:19 ..
