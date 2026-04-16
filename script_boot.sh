@@ -67,4 +67,4 @@ Is -lt
 ls /etc | head -20
 
 #The command ls /dev | tail -20 lists the last 20 files inside the /dev directory.
-ls /dev | tail -20
+ls /dev | tail -20.
