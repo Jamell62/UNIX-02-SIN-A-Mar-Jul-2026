@@ -33,3 +33,6 @@ sudo echo "hola" > /etc/archivo_protegido
 
 #This command correctly writes the text to a protected file using sudo with tee, and suppresses the output by redirecting it to /dev/null.
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+
+#Writes the text “hola” to a protected file using sudo by passing it through the tee command.
+echo "hola" | sudo tee /etc/archivo_protegido
