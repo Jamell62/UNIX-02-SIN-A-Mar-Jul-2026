@@ -27,3 +27,9 @@ chmod o-r secreto.txt
 
 #Gives the owner read and write permissions, and removes all permissions from group and others.
 chmod u+rw,go-rwx privado
+
+#This command attempts to write text to a protected file, but it usually fails because the redirection (>) is not executed with sudo privileges.
+sudo echo "hola" > /etc/archivo_protegido
+
+#This command correctly writes the text to a protected file using sudo with tee, and suppresses the output by redirecting it to /dev/null.
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
