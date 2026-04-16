@@ -15,3 +15,15 @@ rmdir -- -rf
            Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch
            unless --no-single-branch is given to fetch the histories near the tips of all branches. If you want to clone
            submodules shallowly, also pass --shallow-submodules.
+
+#Adds execute permission to the script for all users.
+chmod +x script.sh
+
+#Adds execute permission only for the file owner.
+chmod u+x script.sh
+
+#Removes read permission for others (non-owner users).
+chmod o-r secreto.txt
+
+#Gives the owner read and write permissions, and removes all permissions from group and others.
+chmod u+rw,go-rwx privado
