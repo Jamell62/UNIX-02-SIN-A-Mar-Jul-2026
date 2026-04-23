@@ -36,3 +36,6 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 
 #Writes the text “hola” to a protected file using sudo by passing it through the tee command.
 echo "hola" | sudo tee /etc/archivo_protegido
+
+#This command runs with administrator privileges (sudo), opens a shell (sh -c), prints the word "chao" (echo "chao"), and appends it (>>) to the end of the protected file /etc/archivo_protegido.
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
