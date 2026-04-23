@@ -48,3 +48,9 @@ sudo su
 
 #switches to root with a full login shell, like a fresh root login.
 sudo su -
+
+#Prints the value of the HOME environment variable (your home directory).
+echo "$HOME"
+
+#Prints the literal text $HOME without expanding it.
+echo '$HOME'
