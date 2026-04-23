@@ -39,3 +39,12 @@ echo "hola" | sudo tee /etc/archivo_protegido
 
 #This command runs with administrator privileges (sudo), opens a shell (sh -c), prints the word "chao" (echo "chao"), and appends it (>>) to the end of the protected file /etc/archivo_protegido.
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+
+#starts a login shell as root, loading root’s environment.
+sudo -i
+
+#switches to root user without a full login environment.
+sudo su
+
+#switches to root with a full login shell, like a fresh root login.
+sudo su -
