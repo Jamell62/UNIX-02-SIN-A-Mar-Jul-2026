@@ -87,3 +87,18 @@ mkdir ~/mi_carpeta
 
 #nstalls the program cowsay using the package manager with admin rights.
 sudo apt install cowsay
+
+#creates an empty file named prueba.txt.
+touch prueba.txt
+
+#sets read and write permissions for the owner only.
+chmod 600 prueba.txt
+
+#lists the file with detailed information.
+ls -l prueba.txt
+
+#sets read, write, and execute permissions for the owner, and read and execute permissions for group and others.
+chmod 755 prueba.txt
+
+#lists the file with detailed information.
+ls -l prueba.txt
