@@ -75,3 +75,15 @@ ls -l hola.sh
 
 #runs the script successfully and prints the message.
 ./hola.sh
+
+#lists the files and directories inside /etc.
+ls /etc/
+
+#creates an empty file in /etc with admin privileges.
+sudo touch /etc/prueba.txt
+
+#creates a new folder called mi_carpeta in your home directory.
+mkdir ~/mi_carpeta
+
+#nstalls the program cowsay using the package manager with admin rights.
+sudo apt install cowsay
