@@ -54,3 +54,24 @@ echo "$HOME"
 
 #Prints the literal text $HOME without expanding it.
 echo '$HOME'
+
+#creates (or overwrites) a file called hola.s and writes the shebang line, which tells the system to use /bin/sh to run it.
+echo '#!/bin/sh' > hola.s
+
+#appends a line to hola.sh that will print a message when the script runs.
+echo 'echo "Hola desde mi primer script"' >> hola.sh
+
+#displays the contents of hola.sh in the terminal so you can check it.
+cat hola.sh
+
+#tries to execute the script, but it may fail if it doesn’t have execute permissions yet.
+./hola.sh
+
+#gives the file execute permission so it can be run as a program.
+chmod +x hola.sh
+
+#shows detailed file information, including permissions, owner, and size.
+ls -l hola.sh
+
+#runs the script successfully and prints the message.
+./hola.sh
