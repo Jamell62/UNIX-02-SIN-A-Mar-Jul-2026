@@ -11,3 +11,9 @@ problema 1
    23  git commit -m "Fix problema 1: estructura de directorios corregida"
 
 problema 2
+   mv kepler/sensores.log kepler/registros/sensores.log
+   mv kepler/ajustes.old kepler/ajustes.conf
+   ls kepler/
+   ls kepler/registros/
+   git add .
+   git commit -m "Fix problema 2: archivos movidos y renombrados"
