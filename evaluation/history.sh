@@ -22,3 +22,14 @@ problema 3
    32  chmod 600 kepler/registros/sensores.log
    33  ls -l kepler/registros/sensores.log
    34  git add .
+
+problema 4
+ 37  chmod u+x kepler/runner.sh
+   38  chmod o-w kepler/ajustes.conf
+   39  ls -l kepler/runner.sh
+   40  ls -l kepler/ajustes.conf
+   41  chmod o-w kepler/runner.sh
+   42  ls -l kepler/runner.sh
+   43  ls -l kepler/ajustes.conf
+   44  git add .
+   45  git commit -m "Fix issue 4: symbolic permissions fixed"
