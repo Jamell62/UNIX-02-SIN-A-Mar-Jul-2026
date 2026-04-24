@@ -17,3 +17,8 @@ problema 2
    ls kepler/registros/
    git add .
    git commit -m "Fix problema 2: archivos movidos y renombrados"
+
+problema 3
+   32  chmod 600 kepler/registros/sensores.log
+   33  ls -l kepler/registros/sensores.log
+   34  git add .
