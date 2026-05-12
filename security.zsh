@@ -97,3 +97,9 @@ chgrp grupo_test comun
 
 ls -l comun
 # Displays detailed information of the file "comun", showing its permissions, owner, and updated group
+
+chown jam:grupo_test mi_archivo
+# Changes the owner of "mi_archivo" to user "jam" and the group to "grupo_test"
+
+ls -l mi_archivo
+# Displays detailed information of "mi_archivo", showing its permissions, new owner, and group
