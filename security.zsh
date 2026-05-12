@@ -52,3 +52,21 @@ mkdir privado
 
 #Displays the files and directories in long format, showing permissions, owner, size, and date.
 ls -l
+
+umask 022
+# Sets default file permissions so new files are readable by everyone but only writable by the owner
+
+whoami
+# Displays the current logged-in user
+
+echo "Hola" > mi_archivo
+# Creates a file named mi_archivo and writes the text "Hola" into it
+
+ls -l mi_archivo
+# Shows detailed information about mi_archivo including permissions, owner, size, and modification time
+
+useradd -m -s /usr/bin/zsh jam
+## Creates a new user named "jam", creates a home directory, and sets Zsh as the default shell
+
+chown jam mi_archivo
+# Changes the ownership of mi_archivo to the user "jam"
