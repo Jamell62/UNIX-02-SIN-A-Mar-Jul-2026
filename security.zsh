@@ -70,3 +70,30 @@ useradd -m -s /usr/bin/zsh jam
 
 chown jam mi_archivo
 # Changes the ownership of mi_archivo to the user "jam"
+
+groups
+# Shows the groups the current user belongs to
+
+groupadd grupo_test
+# Creates a new group named "grupo_test"
+
+groups
+# Shows the current user's groups again; only the original groups appear because no user was added to the new group
+
+cat /etc/group
+# Displays all system groups and their configuration from the /etc/group file
+
+touch comun
+# Creates an empty file named "comun"
+
+ls -l comun
+# Shows detailed information about the file "comun" such as permissions, owner, and size
+
+usermod -a -G grupo_test jam
+# Adds the user "jam" to the group "grupo_test" without removing other group memberships
+
+chgrp grupo_test comun
+# Changes the group ownership of the file "comun" to "grupo_test"
+
+ls -l comun
+# Displays detailed information of the file "comun", showing its permissions, owner, and updated group
