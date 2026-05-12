@@ -40,3 +40,15 @@ setfacl -bnR .
 # -b = remove all ACL entries
 # -n = do not recalculate mask
 # -R = apply recursively
+
+#Sets the default permissions so that new files and directories are only accessible by the owner.
+umask 077
+
+#Creates an empty file named secreto.txt.
+touch secreto.txt
+
+#Creates a new directory called privado.
+mkdir privado
+
+#Displays the files and directories in long format, showing permissions, owner, size, and date.
+ls -l
