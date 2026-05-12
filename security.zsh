@@ -103,3 +103,15 @@ chown jam:grupo_test mi_archivo
 
 ls -l mi_archivo
 # Displays detailed information of "mi_archivo", showing its permissions, new owner, and group
+
+mkdir -p proyecto/sub
+# Creates a folder called "proyecto" and inside it creates another folder "sub" (the -p allows creating both at once, including parent directories)
+
+touch proyecto/readme proyecto/sub/datos
+# Creates two empty files: "readme" inside proyecto and "datos" inside the subfolder
+
+chown -R jam:grupo_test proyecto
+# Changes ownership of the folder "proyecto" and everything inside it to user "jam" and group "grupo_test" (recursive change)
+
+ls -lR
+# Lists all files and folders in detail, including subdirectories, showing permissions, owners, and groups
