@@ -134,3 +134,12 @@ id -g
 
 id -G
 #All groups IDs
+
+cat /etc/group | grep root
+#Shows information related to the root group from the /etc/group file.
+
+mkdir ~/proyecto_unix/
+#Creates a new directory called proyecto_unix in the user's home folder.
+
+ls -la ~/proyecto_unix
+#Lists all files and details inside the proyecto_unix directory, including hidden files.
