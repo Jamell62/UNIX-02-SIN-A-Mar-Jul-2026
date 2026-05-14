@@ -143,3 +143,19 @@ mkdir ~/proyecto_unix/
 
 ls -la ~/proyecto_unix
 #Lists all files and details inside the proyecto_unix directory, including hidden files.
+
+groupadd desarrolladores
+groupadd -g 2000 operaciones
+#create a simple group
+
+groupadd --system servicios_web
+#system group
+
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group
+#Searches the /etc/group file for lines containing desarrolladores, operaciones, or servicios_web using escaped pipe operators.
+
+grep -E "desarrolladores|operaciones|servicios_web" /etc/group
+#Searches the /etc/group file for the same group names using extended regular expressions with -E.
+
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+#It is used to search and display specific lines within the fil
