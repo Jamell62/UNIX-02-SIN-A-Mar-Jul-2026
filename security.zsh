@@ -115,3 +115,9 @@ chown -R jam:grupo_test proyecto
 
 ls -lR
 # Lists all files and folders in detail, including subdirectories, showing permissions, owners, and groups
+
+id 
+#Numeric user ID, primary group, secondary groups.
+
+cat/etc/passwd | head -10
+#View all system users
