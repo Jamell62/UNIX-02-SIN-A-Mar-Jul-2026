@@ -159,3 +159,15 @@ grep -E "desarrolladores|operaciones|servicios_web" /etc/group
 
 grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
 #It is used to search and display specific lines within the fil
+
+addgroup disenio
+# Creates a new group named "disenio" with a default system-assigned GID.
+
+addgroup --gid 2100 marketing
+# Creates a new group named "marketing" with a manually assigned GID of 2100.
+
+addgroup --system cache_web
+# Creates a system group named "cache_web" using a system-reserved GID range.
+
+grep "disenio\|marketing\|cache_web" /etc/group
+# Searches the /etc/group file for lines containing any of the specified group names.
