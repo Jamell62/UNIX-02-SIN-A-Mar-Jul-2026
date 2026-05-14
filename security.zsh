@@ -171,3 +171,24 @@ addgroup --system cache_web
 
 grep "disenio\|marketing\|cache_web" /etc/group
 # Searches the /etc/group file for lines containing any of the specified group names.
+
+usermod -aG desarrolladores root 
+#Add the root user to the developers group as a secondary group, without removing it from its other existing groups.
+
+usermod -aG disenio root 
+#Add the root user to the disenio group as a secondary group, without removing it from its other groups.
+
+groupadd grupo_temporal
+# Creates a new group called "grupo_temporal" with a system-assigned GID.
+
+usermod -aG grupo_temporal jam
+# Adds the user "jam" to the group "grupo_temporal" as a secondary group without removing other groups.
+
+id jam
+# Displays the UID, GID, and all groups the user "jam" belongs to.
+
+usermod -G desarrolladores jam
+# Replaces all secondary groups of "jam" with only "desarrolladores" (removes previous extra groups).
+
+id jam
+# Shows the updated user and group information after the changes.
