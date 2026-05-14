@@ -121,3 +121,16 @@ id
 
 cat/etc/passwd | head -10
 #View all system users
+
+groups
+
+groups $USER
+
+id -u
+#ID user
+
+id -g
+#main group id
+
+id -G
+#All groups IDs
