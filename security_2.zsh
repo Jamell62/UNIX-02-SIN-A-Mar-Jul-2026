@@ -60,3 +60,27 @@ id -gn
 
 # Display the restored group name
 echo "Grupo restaurado: $(id -gn)"
+
+# Show detailed information about the file created before changing groups
+ls -la ~/antes_de_newgrp.txt
+
+# Show detailed information about the file created inside the new group
+ls -la ~/dentro_de_newgrp.txt
+
+# Create a new group called "grupo_restringido"
+/usr/sbin/groupadd grupo_restringido
+
+# Verify that the group was created successfully
+cat /etc/group | grep grupo_restringido
+
+# Set or change the password for the group "grupo_restringido"
+gpasswd grupo_restringido
+
+# Change the current session to the "grupo_restringido" group
+newgrp grupo_restringido
+
+# Verify the current active group
+id -gn
+
+# Exit the temporary group session and return to the previous one
+exit
