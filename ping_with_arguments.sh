@@ -5,3 +5,18 @@ TARGET="${1}"
 echo "Running the script ${SCRIPT_NAME}..." 
 echo "Pinging the target: ${TARGET}..." 
 ping "${TARGET}"
+
+echo "The arguments are: $*@" 
+echo "The total number of arguments is: $#"
+
+# Change "$@" to "$*" to observe behavior.
+for args in "$@"; do
+   echo "${args}"
+done
+
+echo "What is your first name?" 
+read -r firstname 
+echo "What is your last name?" 
+read -r lastname 
+echo "Your first name is ${firstname} and your last name is 
+${lastname}"
