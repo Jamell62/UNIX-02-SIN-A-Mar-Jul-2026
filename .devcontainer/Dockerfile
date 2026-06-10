@@ -136,5 +136,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  # Enables the Spanish UTF-8 locale by uncommenting it in locale.gen.
  # sed is used as a stream editor to modify the configuration file
  # automatically (BHB Chapter 2).
+  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
+ \
+ # Generates the locale files so applications can use the selected
+ # language configuration.
+ && locale-gen \
+ \
+ # Removes package cache files and temporary package lists.
+ # Cleaning in the same RUN instruction prevents unnecessary data from
+ # being stored in previous Docker layers, reducing image size.
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+# Docker normally uses /bin/sh for RUN instructions.
+# Bash is selected because it provides additional scripting features used
+# throughout the course (BHB Chapter 1).
 
 
