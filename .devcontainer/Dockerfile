@@ -170,6 +170,15 @@ RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
  && git lfs install --system
+# Changes the default login shell for the root user to Zsh.
+RUN chsh -s /usr/bin/zsh root
+
+# A heredoc allows multiple lines of text to be passed directly to a
+# command. Here it appends configuration to the .zshrc file.
+RUN cat >> /root/.zshrc <<'EOF'
+
+# Displays a custom prompt showing the current directory and whether the
+# previous command completed successfully or failed.
 
 
 
