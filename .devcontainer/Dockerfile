@@ -28,6 +28,19 @@ FROM kalilinux/kali-rolling:latest
 #
 # TERM=xterm-256color enables support for 256 terminal colors, improving
 # readability in terminal applications such as Vim and Zsh.
+#
+#The backslash character continues the instruction on the next line.
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=es_ES.UTF-8 \
+    LC_ALL=es_ES.UTF-8 \
+    TERM=xterm-256color
+
+# Tshark normally asks whether non-root users should be allowed to capture
+# packets. This answer is provided in advance so the build does not stop
+# waiting for user input.
+#
+# The pipe operator sends the output of echo to debconf-set-selections,
+# demonstrating shell redirection concepts discussed in BHB Chapter 1.
 
 
 
