@@ -64,6 +64,77 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 #
 # The trailing backslash allows long commands to continue across multiple
 # lines for readability.
-
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    \
+    # Text editors and command interpreters used throughout the course.
+    neovim \
+    vim \
+    zsh \
+    bash-completion \
+    \
+    # Text-processing tools frequently used in Bash automation.
+    # grep searches for patterns, sed edits text streams and gawk processes
+    # structured text (BHB Chapter 2).
+    perl \
+    make \
+    gawk \
+    sed \
+    grep \
+    \
+    # Core Linux utilities used for file, process and system management.
+    coreutils \
+    findutils \
+    procps \
+    less \
+    tree \
+    jq \
+    \
+    # Manual pages used to access local documentation with the man command.
+    man-db \
+    manpages \
+    manpages-posix \
+    \
+    # Download and version-control tools.
+    curl \
+    wget \
+    git \
+    git-lfs \
+    ca-certificates \
+    locales \
+    \
+    # Static analyzer that helps detect common Bash scripting mistakes.
+    shellcheck \
+    \
+    # Network discovery and scanning tools.
+    nmap \
+    masscan \
+    \
+    # Packet capture and network traffic analysis tools.
+    tcpdump \
+    tshark \
+    \
+    # Additional networking utilities.
+    netcat-traditional \
+    socat \
+    dnsutils \
+    whois \
+    traceroute \
+    mtr-tiny \
+    iproute2 \
+    net-tools \
+    iputils-ping \
+    \
+    # Privacy and proxy-routing tools.
+    tor \
+    torsocks \
+    proxychains4 \
+    obfs4proxy \
+    \
+    # User-friendly HTTP client for testing web requests.
+    httpie \
+ \
+ # Enables the Spanish UTF-8 locale by uncommenting it in locale.gen.
+ # sed is used as a stream editor to modify the configuration file
+ # automatically (BHB Chapter 2).
 
 
