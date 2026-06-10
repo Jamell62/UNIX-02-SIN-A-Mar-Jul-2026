@@ -41,6 +41,29 @@ ENV DEBIAN_FRONTEND=noninteractive \
 #
 # The pipe operator sends the output of echo to debconf-set-selections,
 # demonstrating shell redirection concepts discussed in BHB Chapter 1.
+RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
+    | debconf-set-selections
+
+# Updates the package index and installs all software required for the
+# course environment.
+#
+# apt-get update downloads the latest package information from repositories.
+#
+# apt-get install downloads and installs the requested packages.
+#
+# -y automatically answers yes to installation prompts.
+#
+# --no-install-recommends installs only required dependencies and avoids
+# optional packages, reducing image size.
+#
+# Using one large RUN instruction creates fewer Docker layers, which helps
+# keep the image smaller and improves build performance (BHB Chapter 3).
+#
+# The && operator executes the next command only if the previous one
+# succeeds.
+#
+# The trailing backslash allows long commands to continue across multiple
+# lines for readability.
 
 
 
