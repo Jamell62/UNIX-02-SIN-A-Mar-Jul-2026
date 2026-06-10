@@ -179,6 +179,12 @@ RUN cat >> /root/.zshrc <<'EOF'
 
 # Displays a custom prompt showing the current directory and whether the
 # previous command completed successfully or failed.
+PROMPT='%F{magenta}[👻Jamell-Anangonó]%f %F{cyan}%1~%f %(?,%F{green}✓,%F{red}✗ %?)%f %# '
+EOF
 
+# RUN executes during image creation.
+# CMD defines the default command executed when the container starts.
+# When the container launches, it automatically opens a Zsh session.
+CMD ["/usr/bin/zsh"
 
 
