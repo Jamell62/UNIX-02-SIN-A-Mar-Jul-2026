@@ -151,5 +151,25 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Docker normally uses /bin/sh for RUN instructions.
 # Bash is selected because it provides additional scripting features used
 # throughout the course (BHB Chapter 1).
+SHELL ["/bin/bash", "-c"]
+
+# Sets the default working directory inside the container.
+# New terminal sessions start from this location.
+WORKDIR /workspaces
+
+# Configures Git system-wide inside the container.
+#
+# safe.directory allows Git to trust mounted repositories.
+#
+# init.defaultBranch sets main as the default branch name.
+#
+# pull.rebase false configures git pull to use merge behavior.
+#
+# git lfs install registers Git LFS support globally.
+RUN git config --system --add safe.directory '*' \
+ && git config --system init.defaultBranch main \
+ && git config --system pull.rebase false \
+ && git lfs install --system
+
 
 
