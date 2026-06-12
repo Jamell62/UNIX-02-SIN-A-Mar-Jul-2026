@@ -1,5 +1,5 @@
 #!/bin/bash
-# Specifies that the script should be executed using the Bash shell.
-for i in {1..5}; do
-    echo "Number: $i"
+
+for index in $(seq 1 10); do
+    echo "${index}"
 done
