@@ -32,3 +32,11 @@ else
     echo "User is not root!"
 
 fi
+# adduser: Creates a new user account and sets up its home directory, password, and default settings.
+adduser
+
+# su - jamell: Switches to the user "jamell" and starts a new login shell with that user's environment.
+su - jamell
+
+# To exit the "jamell" session and return to the previous user, type:
+exit
