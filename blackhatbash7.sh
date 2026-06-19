@@ -17,3 +17,17 @@ awk '{print $7}' log.txt
 grep "42.236.10.117" log.txt | awk '{print $7}'
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 grep "Mozilla" log.txt
+head -n 5 new_log.txt
+git diff new_log.txt
+sed -i '$d' new_log.txt
+git diff new_log.txt
+sed 's/ //g' new_log.txt > new_log1.txt
+cat new_log1.txt
+sed '8,10d' new_log1.txt 
+sed -n '10,15 p' log.txt
+sleep 300 &
+jobs
+fg %1
+bg %1
+nohup ./exercise_solution.sh &
+ps -ef | grep exercise_solution
